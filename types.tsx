@@ -8,10 +8,25 @@ export type BottomTabParamList = {
   TabTwo: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type AparatParamList = {
+  AparatScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type ChatyParamList = {
+  ChatyScreen: undefined;
+};
+
+export type StatusParamList = {
+  StatusScreen: undefined;
+};
+
+export type HistoryParamList = {
+  HistoryScreen: undefined;
+};
+
+export type TabParamList = {
+  Aparat: undefined;
+  Chaty: undefined;
+  Status: undefined;
+  Historia: undefined;
 };
