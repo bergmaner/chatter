@@ -1,32 +1,32 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import ChatListItem from '../components/ChatListItem';
+import ChatRooms from "../data/chatRoom";
+import { FlatList, View } from 'react-native';
+import chatRooms from '../data/chatRoom';
 
  const ChatyScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Chaty</Text>
+      <FlatList
+        data={chatRooms}
+        renderItem={({ item }) => <ChatListItem style={{ width: "100%"}} chatRoom={item}/> }
+        keyExtractor = { (item) => item.id}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+    paddingTop: 10
+
+
+  }
 });
 
 export default ChatyScreen;
