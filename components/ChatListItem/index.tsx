@@ -4,6 +4,8 @@ import { ChatRoom } from "../../types";
 import styles from "./style";
 import { Text } from 'react-native-elements';
 import { useNavigation } from "@react-navigation/native";
+import 'moment/locale/pl';
+import moment from "moment";
 
 export type ChatListItemProps = {
     chatRoom: ChatRoom;
@@ -17,7 +19,10 @@ const ChatListItem = (props: ChatListItemProps) => {
     const user = chatRoom.users[1];
 
     const handleClick = () => {
-        navigation.navigate("ChatRoom", { id: chatRoom.id });
+        navigation.navigate("ChatRoom", {
+             id: chatRoom.id,
+             name: user.name
+            });
     }
 
     return (
@@ -29,7 +34,7 @@ const ChatListItem = (props: ChatListItemProps) => {
                 <Text style={styles.username}> {user.name}</Text>
                 <Text numberOfLines={2} style={styles.lastMessage}>  {chatRoom.lastMessage.content}</Text>
                 </View>
-                <Text style={styles.time} >Wczoraj</Text>
+                <Text style={styles.time} >{moment(chatRoom.lastMessage.createdAt).fromNow()}</Text>
                 </View>
             
             </View>

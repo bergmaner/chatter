@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons, Octicons } from '@expo/vector-icons';
+import { FontAwesome5, MaterialCommunityIcons, MaterialIcons, Octicons } from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
@@ -53,7 +53,21 @@ function RootNavigator() {
         )
        }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ title: 'Chat Room' }} />
+      <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={({ route }) => ({
+        title: route.params.name,
+        headerRight: () => (
+          <View style={{
+            flexDirection: "row",
+            width: 100,
+            justifyContent: "space-between",
+            marginRight: 10
+          }}>
+              <MaterialIcons name = "call" size= {22} color = {"white"}/>
+              <FontAwesome5  name = "video" size= {22} color = {"white"}/>
+              <MaterialCommunityIcons name="dots-vertical" size = {22} color={"white"} />
+          </View>
+        )
+      })} />
     </Stack.Navigator>
   );
 }
