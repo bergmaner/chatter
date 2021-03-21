@@ -16,12 +16,25 @@ const styles = StyleSheet.create({
     },
     createdAt: {
         alignSelf: "flex-end",
-        color: "grey"
+        color: "grey",
+        fontSize: 10
     },
     autor: {
         color: "black",
         fontWeight: "bold",
-        marginBottom: 5
+        marginBottom: 5,
+        paddingLeft: 10
+    },
+    avatar: {
+        width: 40,
+        height: 40,
+        borderRadius: 40,
+    },
+    autorContainer : { 
+        display: "flex", 
+        flexDirection: "row", 
+        alignItems: "center", 
+        paddingVertical: 5 
     }
 
 

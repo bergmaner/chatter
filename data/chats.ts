@@ -12,10 +12,11 @@ export default {
 	messages: [{
 		id: 'm1',
 		content: 'co tam Morty?',
-		createdAt: '2020-10-10T12:48:00.000Z',
+		createdAt: '2020-08-01T12:48:00.000Z',
 		user: {
 			id: 'u1',
 			name: 'Kacperr',
+			imageUri: 'https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png',
 		},
 	}, {
 		id: 'm2',
@@ -24,6 +25,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Morty',
+			imageUri: "https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png"
 		},
 	}, {
 		id: 'm3',
@@ -32,6 +34,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Morty',
+			imageUri : "https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png"
 		},
 	}, {
 		id: 'm4',
@@ -40,6 +43,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Kacperr',
+			imageUri: 'https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png',
 		},
 	}, {
 		id: 'm5',
@@ -48,6 +52,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Kacperr',
+			imageUri: 'https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png',
 		},
 	}, {
 		id: 'm6',
@@ -56,6 +61,7 @@ export default {
 		user: {
 			id: 'u2',
 			name: 'Morty',
+			imageUri : "https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png"
 		},
 	}, {
 		id: 'm7',
@@ -64,6 +70,7 @@ export default {
 		user: {
 			id: 'u1',
 			name: 'Kacperr',
+			imageUri: 'https://www.vhv.rs/dpng/d/416-4164987_my-images-for-mickeycee-morty-png-transparent-png.png',
 		},
 	}]
 }

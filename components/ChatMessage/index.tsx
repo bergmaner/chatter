@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, Image } from "react-native";
 import { Message } from "../../types";
 import { View } from "react-native";
 import 'moment/locale/pl';
@@ -18,6 +18,7 @@ const ChatMessage = ( props: ChatMessageProps ) => {
         return message.user.id === "u1";
     }
 
+    console.log(message)
     return (
         <View style = { styles.container }>
          <View style = {[
@@ -27,7 +28,12 @@ const ChatMessage = ( props: ChatMessageProps ) => {
              marginRight: isMyMessage() ? 0 : 50
             }
              ]}>
-          { !isMyMessage() && <Text style={ styles.autor }>{ message.user.name }</Text>}
+            {!isMyMessage() && 
+          <View style={ styles.autorContainer }>
+            <Image source = {{ uri: message.user.imageUri }} style={styles.avatar}/>
+            <Text style={ styles.autor }>{ message.user.name }</Text>
+          </View>
+            }
           <Text style={ styles.message }>{ message.content }</Text>
           <Text style={ styles.createdAt }>{ moment(message.createdAt).fromNow() }</Text>
           
